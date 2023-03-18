@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecordTemperatureChecks">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="281dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="130dp"
+        android:text="Fridge Temperatures should be \nbetween 0oC -8oC \nFreezer Temps should be \n-18oC to -20oC"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="44dp" />
+
+    <TextView
+        android:id="@+id/device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:text="Device"
+        android:textSize="48sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="614dp"
+        android:layout_below="@+id/device"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:hint="Date"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:hint="Time"
+                android:inputType="time" />
+
+            <EditText
+                android:id="@+id/temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:hint="Temperature"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Comment"
+                android:inputType="textMultiLine" />
+
+            <EditText
+                android:id="@+id/checkedBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:hint="Checked by"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:text="Submit" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
