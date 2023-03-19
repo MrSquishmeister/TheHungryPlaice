@@ -13,13 +13,8 @@ import com.lee.thehungryplaice.databinding.ActivityRecordPeriodicalCleaningBindi
 
 class RecordPeriodicalCleaning : AppCompatActivity() {
     private lateinit var binding: ActivityRecordPeriodicalCleaningBinding
-    private lateinit var date : EditText
-    private lateinit var name : EditText
-    private lateinit var fryerRedVan : CheckBox
-    private lateinit var fryerBlueVan : CheckBox
-    private lateinit var fridgeCleaning : CheckBox
-    private lateinit var freezerCleaning : CheckBox
     private var db = Firebase.firestore
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         try {
@@ -29,12 +24,12 @@ class RecordPeriodicalCleaning : AppCompatActivity() {
         binding = ActivityRecordPeriodicalCleaningBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        date = findViewById(R.id.date)
-        name = findViewById(R.id.name)
-        fryerRedVan = findViewById(R.id.fryerRedVan)
-        fryerBlueVan = findViewById(R.id.fryerBlueVan)
-        fridgeCleaning = findViewById(R.id.fridgeCleaning)
-        freezerCleaning = findViewById(R.id.freezerCleaning)
+        val date = findViewById<EditText>(R.id.date)
+        val name = findViewById<EditText>(R.id.name)
+        val fryerRedVan = findViewById<CheckBox>(R.id.fryerRedVan)
+        val fryerBlueVan = findViewById<CheckBox>(R.id.fryerBlueVan)
+        val fridgeCleaning = findViewById<CheckBox>(R.id.fridgeCleaning)
+        val freezerCleaning = findViewById<CheckBox>(R.id.freezerCleaning)
         val backButton = findViewById<Button>(R.id.backButton)
         val submitButton = findViewById<Button>(R.id.submitButton)
 
