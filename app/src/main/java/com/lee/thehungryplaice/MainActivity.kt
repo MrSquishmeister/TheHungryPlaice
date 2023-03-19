@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         val temperatureChecksButton = findViewById<Button>(R.id.temperatureCheckButton)
         val everydaySheetButton = findViewById<Button>(R.id.everydaySheetButton)
+        val cleaningScheduleButton = findViewById<Button>(R.id.cleaningScheduleButton)
 
         temperatureChecksButton.setOnClickListener{
             startActivity(Intent(this, TemperatureChecks::class.java))
@@ -28,6 +29,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, EverydaySheet::class.java))
         }
 
+        cleaningScheduleButton.setOnClickListener{
+            startActivity(Intent(this, CleaningSchedule::class.java))
+        }
 
     }
 }
