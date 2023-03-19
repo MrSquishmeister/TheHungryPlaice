@@ -7,19 +7,13 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.cardview.widget.CardView
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.lee.thehungryplaice.databinding.ActivityRecordTemperatureChecksBinding
 
 class RecordTemperatureChecks : AppCompatActivity() {
     private lateinit var binding: ActivityRecordTemperatureChecksBinding
-    private lateinit var device : TextView
-    private lateinit var date : EditText
-    private lateinit var time : EditText
-    private lateinit var temperature : EditText
-    private lateinit var comment : EditText
-    private lateinit var checkedBy : EditText
-
     private var db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,16 +25,16 @@ class RecordTemperatureChecks : AppCompatActivity() {
         binding = ActivityRecordTemperatureChecksBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        device = findViewById(R.id.device)
+        val device = findViewById<TextView>(R.id.device)
         val deviceName = intent.getStringExtra("deviceName")
         device.text = (deviceName)
 
-        date = findViewById(R.id.date)
-        time = findViewById(R.id.time)
-        temperature = findViewById(R.id.temperature)
-        comment = findViewById(R.id.comment)
-        checkedBy = findViewById(R.id.checkedBy)
-        val backButton = findViewById<Button>(R.id.backButton)
+        val date = findViewById<EditText>(R.id.date)
+        val time = findViewById<EditText>(R.id.time)
+        val temperature = findViewById<EditText>(R.id.temperature)
+        val comment = findViewById<EditText>(R.id.comment)
+        val checkedBy = findViewById<EditText>(R.id.checkedBy)
+        val backButton = findViewById<CardView>(R.id.backButton)
         val submitButton = findViewById<Button>(R.id.submitButton)
 
         backButton.setOnClickListener {
