@@ -1,8 +1,10 @@
 package com.lee.thehungryplaice
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -49,8 +51,6 @@ class RecordTemperatureChecks : AppCompatActivity() {
             val sComment = comment.text.toString().trim()
             val sCheckedBy = checkedBy.text.toString().trim()
 
-
-
             if (sDevice.isEmpty() || sDate.isEmpty() ||
                 sTime.isEmpty() || sTemperature.isEmpty()
                 || sComment.isEmpty() || sCheckedBy.isEmpty()){
@@ -73,6 +73,8 @@ class RecordTemperatureChecks : AppCompatActivity() {
                     "Comment" to sComment,
                     "Checked By" to sCheckedBy
                 )
+
+                db.collection(sDate).document(sDevice).set(temperatureMap)
 
                 db.collection("Temperatures").document(sDate)
                     .collection(sType).document(sDevice).set(temperatureMap)

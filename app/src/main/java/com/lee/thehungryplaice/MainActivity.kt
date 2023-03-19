@@ -44,9 +44,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         viewData.setOnClickListener {
-            val openURL = Intent(android.content.Intent.ACTION_VIEW)
-            openURL.data = Uri.parse("https://console.firebase.google.com/project/the-hungry-plaice/firestore/data")
-            startActivity(openURL)
+            startActivity(Intent(this, ViewData::class.java))
+//            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+//            openURL.data = Uri.parse("https://console.firebase.google.com/project/the-hungry-plaice/firestore/data")
+//            startActivity(openURL)
         }
 
 

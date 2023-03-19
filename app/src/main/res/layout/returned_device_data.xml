@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="5dp"
+    app:cardBackgroundColor="@color/grey"
+    android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/returnedDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:hint="Date"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:backgroundTint="@color/white">
+            </TextView>
+
+            <TextView
+                android:id="@+id/returnedTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:hint="Time"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:backgroundTint="@color/white"
+                android:layout_marginBottom="20dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/returnedDevice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:hint="Device"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:backgroundTint="@color/white"
+                android:layout_marginBottom="20dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/returnedTemperature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:hint="Temperature"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:backgroundTint="@color/white"
+                android:layout_marginBottom="20dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/returnedComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:hint="Comment"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:backgroundTint="@color/white"
+                android:layout_marginBottom="20dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/returnedCheckedBy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:hint="Checked By"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:backgroundTint="@color/white"
+                android:layout_marginBottom="20dp">
+            </TextView>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
