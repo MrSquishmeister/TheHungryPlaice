@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
+import androidx.cardview.widget.CardView
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.lee.thehungryplaice.databinding.ActivityRecordPeriodicalCleaningBinding
@@ -30,7 +31,7 @@ class RecordPeriodicalCleaning : AppCompatActivity() {
         val fryerBlueVan = findViewById<CheckBox>(R.id.fryerBlueVan)
         val fridgeCleaning = findViewById<CheckBox>(R.id.fridgeCleaning)
         val freezerCleaning = findViewById<CheckBox>(R.id.freezerCleaning)
-        val backButton = findViewById<Button>(R.id.backButton)
+        val backButton = findViewById<CardView>(R.id.backButton)
         val submitButton = findViewById<Button>(R.id.submitButton)
 
         backButton.setOnClickListener {
@@ -54,7 +55,7 @@ class RecordPeriodicalCleaning : AppCompatActivity() {
                     "Freezer Cleaning" to "Complete"
                 )
 
-                db.collection("periodical cleaning").document(sDate).set(periodicalCleaningMap)
+                db.collection("Periodical Cleaning").document(sDate).set(periodicalCleaningMap)
                     .addOnSuccessListener {
                         Toast.makeText(this, "Successfully recorded periodical cleaning!", Toast.LENGTH_SHORT).show()
                         date.text.clear()

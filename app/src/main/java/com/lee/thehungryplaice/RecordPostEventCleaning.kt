@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
+import androidx.cardview.widget.CardView
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.lee.thehungryplaice.databinding.ActivityRecordPeriodicalCleaningBinding
@@ -24,7 +25,7 @@ class RecordPostEventCleaning : AppCompatActivity() {
         binding = ActivityRecordPostEventCleaningBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val backButton = findViewById<Button>(R.id.backButton)
+        val backButton = findViewById<CardView>(R.id.backButton)
         val submitButton = findViewById<Button>(R.id.submitButton)
 
         val date = findViewById<EditText>(R.id.date)

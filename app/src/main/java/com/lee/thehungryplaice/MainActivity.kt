@@ -37,5 +37,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, RecordPeriodicalCleaning::class.java))
         }
 
+        eventDayFishChips.setOnClickListener{
+            startActivity(Intent(this, RecordEverydaySheetFishChips::class.java))
+        }
+
+
     }
 }

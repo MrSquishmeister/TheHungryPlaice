@@ -27,21 +27,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".CleaningSchedule"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".RecordEverydaySheetFishChips"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".EverydaySheet"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

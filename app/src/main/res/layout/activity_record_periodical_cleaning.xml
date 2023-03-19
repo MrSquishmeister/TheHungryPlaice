@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/grey"
         tools:context=".RecordPeriodicalCleaning">
 
-        <Button
+        <androidx.cardview.widget.CardView
             android:id="@+id/backButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="16dp"
-            android:text="Back" />
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/grey"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/backarrow" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/title"
@@ -24,7 +39,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="100dp"
             android:text="Periodical\n Cleaning"
-            android:textSize="48sp" />
+            android:textSize="48sp"
+            android:textColor="@color/white" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -48,7 +64,10 @@
                     android:ems="10"
                     android:hint="Date"
                     android:inputType="date"
-                    android:minHeight="48dp" />
+                    android:minHeight="48dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:backgroundTint="@color/white"/>
 
                 <EditText
                     android:id="@+id/name"
@@ -61,7 +80,9 @@
                     android:hint="Name"
                     android:inputType="textMultiLine"
                     android:minHeight="48dp"
-                    android:textColorHint="#757575" />
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:backgroundTint="@color/white"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -70,6 +91,7 @@
                     android:layout_marginTop="40dp"
                     android:textSize="30sp"
                     android:text="Fryer - Red Van"
+                    android:textColor="@color/white"
                     />
 
                 <TextView
@@ -78,6 +100,7 @@
                     android:layout_gravity="center"
                     android:textSize="20sp"
                     android:text="- Empty oil into containers for collection \n- Clean out residual debris from fryers\n- Hot boil the fryers\n- Re Fill Oil"
+                    android:textColor="@color/white"
                     />
 
                 <CheckBox
@@ -86,6 +109,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Click box when complete"
+                    android:textColor="@color/white"
                 />
 
                 <TextView
@@ -95,6 +119,7 @@
                     android:layout_marginTop="40dp"
                     android:textSize="30sp"
                     android:text="Fryer - Blue Van"
+                    android:textColor="@color/white"
                     />
 
                 <TextView
@@ -103,6 +128,7 @@
                     android:layout_gravity="center"
                     android:textSize="20sp"
                     android:text="- Empty oil into containers for collection \n- Clean out residual debris from fryers\n- Hot boil the fryers\n- Re Fill Oil"
+                    android:textColor="@color/white"
                     />
 
                 <CheckBox
@@ -111,6 +137,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Click box when complete"
+                    android:textColor="@color/white"
                     />
 
                 <TextView
@@ -120,6 +147,7 @@
                     android:layout_marginTop="40dp"
                     android:textSize="30sp"
                     android:text="Fridge Cleaning"
+                    android:textColor="@color/white"
                     />
 
                 <TextView
@@ -130,6 +158,7 @@
                     android:layout_marginRight="10dp"
                     android:textSize="20sp"
                     android:text="- Empty fridge of contents\n- Dispose of any food items\n- Remove any visible food debris/oil using blue roll\n- Using hot soapy water and a clean disposable cloth wipe over\n- Spray the area with Antibac/Sanitiser"
+                    android:textColor="@color/white"
                     />
 
                 <CheckBox
@@ -138,6 +167,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Click box when complete"
+                    android:textColor="@color/white"
                     />
 
                 <TextView
@@ -147,6 +177,7 @@
                     android:layout_marginTop="40dp"
                     android:textSize="30sp"
                     android:text="Freezer Cleaning"
+                    android:textColor="@color/white"
                     />
 
                 <TextView
@@ -157,6 +188,7 @@
                     android:layout_marginRight="10dp"
                     android:textSize="20sp"
                     android:text="- Empty freezer of contents\n- Dispose of any food items\n- Remove any visible food debris/oil using blue roll\n- Using hot soapy water and a clean disposable cloth wipe over\n- Spray the area with Antibac/Sanitiser"
+                    android:textColor="@color/white"
                     />
 
                 <CheckBox
@@ -165,6 +197,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Click box when complete"
+                    android:textColor="@color/white"
                     />
 
                 <Button
@@ -174,6 +207,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="40dp"
+                    android:textColor="@color/white"
                     android:text="Submit" />
 
             </LinearLayout>
