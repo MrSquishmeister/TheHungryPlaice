@@ -1,5 +1,6 @@
 package com.lee.thehungryplaice
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -18,7 +19,6 @@ class RecordTemperatureChecks : AppCompatActivity() {
     private lateinit var temperature : EditText
     private lateinit var comment : EditText
     private lateinit var checkedBy : EditText
-    private lateinit var submitButton : Button
 
     private var db = Firebase.firestore
 
@@ -40,7 +40,12 @@ class RecordTemperatureChecks : AppCompatActivity() {
         temperature = findViewById(R.id.temperature)
         comment = findViewById(R.id.comment)
         checkedBy = findViewById(R.id.checkedBy)
-        submitButton = findViewById(R.id.submitButton)
+        val backButton = findViewById<Button>(R.id.backButton)
+        val submitButton = findViewById<Button>(R.id.submitButton)
+
+        backButton.setOnClickListener {
+            startActivity(Intent(this, TemperatureChecks::class.java))
+        }
 
         submitButton.setOnClickListener{
             val sDevice = device.text.toString().trim()
@@ -72,9 +77,6 @@ class RecordTemperatureChecks : AppCompatActivity() {
                 .addOnFailureListener{
                     Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
                 }
-
-
         }
-
     }
 }

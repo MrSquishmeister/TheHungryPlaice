@@ -17,12 +17,17 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val tempButton = findViewById<Button>(R.id.tempButton)
+        val temperatureChecksButton = findViewById<Button>(R.id.temperatureCheckButton)
+        val everydaySheetButton = findViewById<Button>(R.id.everydaySheetButton)
 
-        tempButton.setOnClickListener{
-            val Intent = Intent(this, TemperatureChecks::class.java)
-            startActivity(Intent)
+        temperatureChecksButton.setOnClickListener{
+            startActivity(Intent(this, TemperatureChecks::class.java))
         }
+
+        everydaySheetButton.setOnClickListener{
+            startActivity(Intent(this, EverydaySheet::class.java))
+        }
+
 
     }
 }

@@ -17,6 +17,7 @@ class TemperatureChecks : AppCompatActivity() {
         binding = ActivityTemperatureChecksBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val backButton = findViewById<Button>(R.id.backButton)
         val fridge1Button = findViewById<Button>(R.id.fridge1Button)
         val fridge2Button = findViewById<Button>(R.id.fridge2Button)
         val freezer1Button = findViewById<Button>(R.id.freezer1Button)
@@ -25,6 +26,9 @@ class TemperatureChecks : AppCompatActivity() {
         val freezer4Button = findViewById<Button>(R.id.freezer4Button)
         val freezer5Button = findViewById<Button>(R.id.freezer5Button)
 
+        backButton.setOnClickListener{
+            startActivity(Intent(this, MainActivity::class.java))
+        }
         fridge1Button.setOnClickListener{
             callActivity("Fridge1")
         }
