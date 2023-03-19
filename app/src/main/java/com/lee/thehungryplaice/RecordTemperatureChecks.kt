@@ -42,20 +42,19 @@ class RecordTemperatureChecks : AppCompatActivity() {
         }
 
         submitButton.setOnClickListener{
+            val sDevice = device.text.toString().trim()
+            val sDate = date.text.toString().trim()
+            val sTime = time.text.toString().trim()
+            val sTemperature = temperature.text.toString().trim()
+            val sComment = comment.text.toString().trim()
+            val sCheckedBy = checkedBy.text.toString().trim()
 
-            if (device.text.toString().trim().isEmpty() || date.text.toString().trim().isEmpty() ||
-                time.text.toString().trim().isEmpty() || temperature.text.toString().trim().isEmpty()
-                || comment.text.toString().trim().isEmpty() || checkedBy.text.toString().trim().isEmpty()){
+            if (sDevice.isEmpty() || sDate.isEmpty() ||
+                sTime.isEmpty() || sTemperature.isEmpty()
+                || sComment.isEmpty() || sCheckedBy.isEmpty()){
                 Toast.makeText(this, "Fill in all fields", Toast.LENGTH_SHORT).show()
             }
             else{
-                val sDevice = device.text.toString().trim()
-                val sDate = date.text.toString().trim()
-                val sTime = time.text.toString().trim()
-                val sTemperature = temperature.text.toString().trim()
-                val sComment = comment.text.toString().trim()
-                val sCheckedBy = checkedBy.text.toString().trim()
-
                 val temperatureMap = hashMapOf(
                     "Device" to sDevice,
                     "Date" to sDate,

@@ -1,6 +1,7 @@
 package com.lee.thehungryplaice
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.cardview.widget.CardView
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         val evenDayPizza = findViewById<CardView>(R.id.eventDayPizza)
         val eventDayJacketPotatoes = findViewById<CardView>(R.id.eventDayJacketPotatoes)
         val eventDayBurgersHotdogs = findViewById<CardView>(R.id.eventDayBurgersHotdogs)
+        val viewData = findViewById<CardView>(R.id.viewData)
 
         temperatureChecks.setOnClickListener{
             startActivity(Intent(this, TemperatureChecks::class.java))
@@ -39,6 +41,12 @@ class MainActivity : AppCompatActivity() {
 
         eventDayFishChips.setOnClickListener{
             startActivity(Intent(this, RecordEverydaySheetFishChips::class.java))
+        }
+
+        viewData.setOnClickListener {
+            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            openURL.data = Uri.parse("https://console.firebase.google.com/project/the-hungry-plaice/firestore/data")
+            startActivity(openURL)
         }
 
 
