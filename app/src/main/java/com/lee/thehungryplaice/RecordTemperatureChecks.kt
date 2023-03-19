@@ -49,12 +49,22 @@ class RecordTemperatureChecks : AppCompatActivity() {
             val sComment = comment.text.toString().trim()
             val sCheckedBy = checkedBy.text.toString().trim()
 
+
+
             if (sDevice.isEmpty() || sDate.isEmpty() ||
                 sTime.isEmpty() || sTemperature.isEmpty()
                 || sComment.isEmpty() || sCheckedBy.isEmpty()){
                 Toast.makeText(this, "Fill in all fields", Toast.LENGTH_SHORT).show()
             }
             else{
+                var sType = "";
+                if(sDevice.contains("Fridge")){
+                    sType = "Fridges"
+                }else if(sDevice.contains("Freezer"))
+                {
+                    sType = "Freezers"
+                }
+
                 val temperatureMap = hashMapOf(
                     "Device" to sDevice,
                     "Date" to sDate,
@@ -64,8 +74,8 @@ class RecordTemperatureChecks : AppCompatActivity() {
                     "Checked By" to sCheckedBy
                 )
 
-                db.collection("Temperatures").document(sDevice)
-                    .collection(sDevice).document(sDate).set(temperatureMap)
+                db.collection("Temperatures").document(sDate)
+                    .collection(sType).document(sDevice).set(temperatureMap)
                     .addOnSuccessListener {
                         Toast.makeText(this, "Successfully recorded temperatures!", Toast.LENGTH_SHORT).show()
                         date.text.clear()

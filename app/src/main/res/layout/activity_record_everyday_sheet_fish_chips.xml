@@ -63,7 +63,7 @@
                     android:layout_marginTop="40dp"
                     android:ems="10"
                     android:hint="Date"
-                    android:inputType="date"
+                    android:inputType="time"
                     android:minHeight="48dp"
                     android:textColor="@color/white"
                     android:textColorHint="@color/white"
@@ -169,7 +169,7 @@
                                     android:textSize="18sp"
                                     android:layout_marginTop="20dp"
                                     android:hint="Date"
-                                    android:inputType="date"
+                                    android:inputType="time"
                                     android:textColor="@color/white"
                                     android:textColorHint="@color/white"
                                     android:backgroundTint="@color/white">
@@ -228,8 +228,8 @@
                                     android:textColor="@color/white"
                                     android:textColorHint="@color/white"
                                     android:backgroundTint="@color/white"
-                                    android:hint="Date"
-                                    android:inputType="date">
+                                    android:inputType="time"
+                                    android:hint="Date">
                                 </EditText>
 
                                 <EditText
@@ -285,8 +285,8 @@
                                     android:textColor="@color/white"
                                     android:textColorHint="@color/white"
                                     android:backgroundTint="@color/white"
-                                    android:hint="Date"
-                                    android:inputType="date">
+                                    android:inputType="time"
+                                    android:hint="Date">
                                 </EditText>
 
                                 <EditText
@@ -342,8 +342,8 @@
                                     android:textColor="@color/white"
                                     android:textColorHint="@color/white"
                                     android:backgroundTint="@color/white"
-                                    android:hint="Date"
-                                    android:inputType="date">
+                                    android:inputType="time"
+                                    android:hint="Date">
                                 </EditText>
 
                                 <EditText
@@ -399,8 +399,8 @@
                                     android:textColor="@color/white"
                                     android:textColorHint="@color/white"
                                     android:backgroundTint="@color/white"
-                                    android:hint="Date"
-                                    android:inputType="date">
+                                    android:inputType="time"
+                                    android:hint="Date">
                                 </EditText>
 
                                 <EditText
@@ -456,8 +456,8 @@
                                     android:textColor="@color/white"
                                     android:textColorHint="@color/white"
                                     android:backgroundTint="@color/white"
-                                    android:hint="Date"
-                                    android:inputType="date">
+                                    android:inputType="time"
+                                    android:hint="Date">
                                 </EditText>
 
                                 <EditText
@@ -538,7 +538,7 @@
                                     android:textSize="18sp"
                                     android:layout_marginTop="20dp"
                                     android:hint="Date"
-                                    android:inputType="date"
+                                    android:inputType="time"
                                     android:textColor="@color/white"
                                     android:textColorHint="@color/white"
                                     android:backgroundTint="@color/white">
@@ -595,7 +595,7 @@
                                     android:textSize="18sp"
                                     android:layout_marginTop="20dp"
                                     android:hint="Date"
-                                    android:inputType="date"
+                                    android:inputType="time"
                                     android:textColor="@color/white"
                                     android:textColorHint="@color/white"
                                     android:backgroundTint="@color/white">
@@ -666,7 +666,7 @@
                                     android:textSize="18sp"
                                     android:layout_marginTop="20dp"
                                     android:hint="Date"
-                                    android:inputType="date"
+                                    android:inputType="time"
                                     android:textColor="@color/white"
                                     android:textColorHint="@color/white"
                                     android:backgroundTint="@color/white">
@@ -737,7 +737,7 @@
                                     android:textSize="18sp"
                                     android:layout_marginTop="20dp"
                                     android:hint="Date"
-                                    android:inputType="date"
+                                    android:inputType="time"
                                     android:textColor="@color/white"
                                     android:textColorHint="@color/white"
                                     android:backgroundTint="@color/white">
@@ -835,7 +835,7 @@
                                     android:textSize="18sp"
                                     android:layout_marginTop="20dp"
                                     android:hint="Date"
-                                    android:inputType="date"
+                                    android:inputType="time"
                                     android:textColor="@color/white"
                                     android:textColorHint="@color/white"
                                     android:backgroundTint="@color/white">
@@ -892,7 +892,7 @@
                                     android:textSize="18sp"
                                     android:layout_marginTop="20dp"
                                     android:hint="Date"
-                                    android:inputType="date"
+                                    android:inputType="time"
                                     android:textColor="@color/white"
                                     android:textColorHint="@color/white"
                                     android:backgroundTint="@color/white">
@@ -990,7 +990,7 @@
                                     android:textSize="18sp"
                                     android:layout_marginTop="20dp"
                                     android:hint="Date"
-                                    android:inputType="date"
+                                    android:inputType="time"
                                     android:textColor="@color/white"
                                     android:textColorHint="@color/white"
                                     android:backgroundTint="@color/white">
@@ -1061,7 +1061,7 @@
                                     android:textSize="18sp"
                                     android:layout_marginTop="20dp"
                                     android:hint="Date"
-                                    android:inputType="date"
+                                    android:inputType="time"
                                     android:textColor="@color/white"
                                     android:textColorHint="@color/white"
                                     android:backgroundTint="@color/white">
@@ -1132,7 +1132,7 @@
                                     android:textSize="18sp"
                                     android:layout_marginTop="20dp"
                                     android:hint="Date"
-                                    android:inputType="date"
+                                    android:inputType="time"
                                     android:textColor="@color/white"
                                     android:textColorHint="@color/white"
                                     android:backgroundTint="@color/white">
