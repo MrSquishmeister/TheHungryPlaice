@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.cardview.widget.CardView
 import com.lee.thehungryplaice.databinding.ActivityTemperatureChecksBinding
 
 class TemperatureChecks : AppCompatActivity() {
@@ -17,14 +18,14 @@ class TemperatureChecks : AppCompatActivity() {
         binding = ActivityTemperatureChecksBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val backButton = findViewById<Button>(R.id.backButton)
-        val fridge1Button = findViewById<Button>(R.id.fridge1Button)
-        val fridge2Button = findViewById<Button>(R.id.fridge2Button)
-        val freezer1Button = findViewById<Button>(R.id.freezer1Button)
-        val freezer2Button = findViewById<Button>(R.id.freezer2Button)
-        val freezer3Button = findViewById<Button>(R.id.freezer3Button)
-        val freezer4Button = findViewById<Button>(R.id.freezer4Button)
-        val freezer5Button = findViewById<Button>(R.id.freezer5Button)
+        val backButton = findViewById<CardView>(R.id.backButton)
+        val fridge1Button = findViewById<CardView>(R.id.fridge1Button)
+        val fridge2Button = findViewById<CardView>(R.id.fridge2Button)
+        val freezer1Button = findViewById<CardView>(R.id.freezer1Button)
+        val freezer2Button = findViewById<CardView>(R.id.freezer2Button)
+        val freezer3Button = findViewById<CardView>(R.id.freezer3Button)
+        val freezer4Button = findViewById<CardView>(R.id.freezer4Button)
+        val freezer5Button = findViewById<CardView>(R.id.freezer5Button)
 
         backButton.setOnClickListener{
             startActivity(Intent(this, MainActivity::class.java))

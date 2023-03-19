@@ -34,7 +34,7 @@ class RecordPeriodicalCleaning : AppCompatActivity() {
         val submitButton = findViewById<Button>(R.id.submitButton)
 
         backButton.setOnClickListener {
-            startActivity(Intent(this, CleaningSchedule::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
         submitButton.setOnClickListener{

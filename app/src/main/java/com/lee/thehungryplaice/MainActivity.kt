@@ -3,7 +3,7 @@ package com.lee.thehungryplaice
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import androidx.cardview.widget.CardView
 import com.lee.thehungryplaice.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -17,20 +17,24 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val temperatureChecksButton = findViewById<Button>(R.id.temperatureCheckButton)
-        val everydaySheetButton = findViewById<Button>(R.id.everydaySheetButton)
-        val cleaningScheduleButton = findViewById<Button>(R.id.cleaningScheduleButton)
+        val temperatureChecks = findViewById<CardView>(R.id.temperatureChecks)
+        val postEventCleaning = findViewById<CardView>(R.id.postEventCleaning)
+        val periodicalCleaning = findViewById<CardView>(R.id.periodicalCleaning)
+        val eventDayFishChips = findViewById<CardView>(R.id.eventDayFishChips)
+        val evenDayPizza = findViewById<CardView>(R.id.eventDayPizza)
+        val eventDayJacketPotatoes = findViewById<CardView>(R.id.eventDayJacketPotatoes)
+        val eventDayBurgersHotdogs = findViewById<CardView>(R.id.eventDayBurgersHotdogs)
 
-        temperatureChecksButton.setOnClickListener{
+        temperatureChecks.setOnClickListener{
             startActivity(Intent(this, TemperatureChecks::class.java))
         }
 
-        everydaySheetButton.setOnClickListener{
-            startActivity(Intent(this, EverydaySheet::class.java))
+        postEventCleaning.setOnClickListener{
+            startActivity(Intent(this, RecordPostEventCleaning::class.java))
         }
 
-        cleaningScheduleButton.setOnClickListener{
-            startActivity(Intent(this, CleaningSchedule::class.java))
+        periodicalCleaning.setOnClickListener{
+            startActivity(Intent(this, RecordPeriodicalCleaning::class.java))
         }
 
     }

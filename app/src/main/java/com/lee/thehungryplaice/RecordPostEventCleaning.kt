@@ -45,7 +45,7 @@ class RecordPostEventCleaning : AppCompatActivity() {
         val hotWaterContainer = findViewById<CheckBox>(R.id.hotWaterContainer)
 
         backButton.setOnClickListener {
-            startActivity(Intent(this, CleaningSchedule::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
         submitButton.setOnClickListener{
