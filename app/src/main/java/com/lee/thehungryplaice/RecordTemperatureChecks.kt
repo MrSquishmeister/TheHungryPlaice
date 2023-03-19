@@ -74,7 +74,7 @@ class RecordTemperatureChecks : AppCompatActivity() {
                 db.collection("temperatures").document(sDevice)
                     .collection(sDevice).document(sDate).set(temperatureMap)
                     .addOnSuccessListener {
-                        Toast.makeText(this, "Successfully added!", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Successfully recorded temperatures!", Toast.LENGTH_SHORT).show()
                         date.text.clear()
                         time.text.clear()
                         temperature.text.clear()
@@ -82,7 +82,7 @@ class RecordTemperatureChecks : AppCompatActivity() {
                         checkedBy.text.clear()
                     }
                     .addOnFailureListener{
-                        Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Failed to record temperatures", Toast.LENGTH_SHORT).show()
                     }
             }
         }
