@@ -25,6 +25,10 @@ class CleaningSchedule : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
         }
 
+        postEventCleaningButton.setOnClickListener{
+            startActivity(Intent(this, RecordPostEventCleaning::class.java))
+        }
+
         periodicalCleaningButton.setOnClickListener{
             startActivity(Intent(this, RecordPeriodicalCleaning::class.java))
         }

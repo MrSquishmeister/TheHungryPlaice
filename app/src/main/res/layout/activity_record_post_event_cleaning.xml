@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RecordPostEventCleaning">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="16dp"
+            android:text="Back" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:text="Post Event\n Cleaning"
+            android:textSize="48sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="617dp"
+            android:layout_below="@+id/title"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:hint="Date"
+                    android:inputType="date"
+                    android:minHeight="48dp" />
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="Name"
+                    android:inputType="textMultiLine"
+                    android:minHeight="48dp"
+                    android:textColorHint="#757575" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:textSize="30sp"
+                    android:text="Fryer"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="20sp"
+                    android:text="- Leaving Lids closed, wipe away any oil deposits using blue roll\n- Remove any visible food debris/oil using blue roll\n- Using hot soapy water and a clean disposable cloth wipe over\n- Use degreaser spray to loosen the stubborn areas the surface within the top box area including the backs and sides\n- Leave for the Manufacturer’s recommended time\n- Clean degreaser using hot soapy water and disposable cloth\n- Spray the area with Antibac/Sanitiser"
+                    />
+
+                <CheckBox
+                    android:id="@+id/fryer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Click box when complete"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:textSize="30sp"
+                    android:text="Bain Marie"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="20sp"
+                    android:text="- Remove any visible food debris/oil using blue roll\n- Using hot soapy water and a clean disposable cloth wipe over\n- Spray the area with Antibac/Sanitiser"
+                    />
+
+                <CheckBox
+                    android:id="@+id/bainMarie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Click box when complete"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:textSize="30sp"
+                    android:text="Surfaces"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="20sp"
+                    android:text="- Remove any visible food debris/oil using blue roll\n- Using hot soapy water and a clean disposable cloth wipe over\n- Spray the area with Antibac/Sanitiser"
+                    />
+
+                <CheckBox
+                    android:id="@+id/surfaces"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Click box when complete"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:textSize="30sp"
+                    android:text="Shelves"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="20sp"
+                    android:text="- Remove items on shelving and reorganise if necessary\n- Remove any visible food debris/oil using blue roll\n- Using hot soapy water and a clean disposable cloth wipe over\n- Spray the area with Antibac/Sanitiser"
+                    />
+
+                <CheckBox
+                    android:id="@+id/shelves"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Click box when complete"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:textSize="30sp"
+                    android:text="Walls"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="20sp"
+                    android:text="- Remove any visible food debris/oil using blue roll\n- Using hot soapy water and a clean disposable cloth wipe over\n- Spray the area with Antibac/Sanitiser"
+                    />
+
+                <CheckBox
+                    android:id="@+id/walls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Click box when complete"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:textSize="30sp"
+                    android:text="Ceiling"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="20sp"
+                    android:text="- Remove any visible food debris/oil using blue roll\n- Using hot soapy water and a clean disposable cloth wipe over\n- Spray the area with Antibac/Sanitiser"
+                    />
+
+                <CheckBox
+                    android:id="@+id/ceiling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Click box when complete"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:textSize="30sp"
+                    android:text="Flooring"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="20sp"
+                    android:text="- Remove any visible food debris/oil using blue roll\n- Using hot soapy water and a clean disposable cloth wipe over\n- Spray the area with Antibac/Sanitiser"
+                    />
+
+                <CheckBox
+                    android:id="@+id/flooring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Click box when complete"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:textSize="30sp"
+                    android:text="Cool Boxes"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="20sp"
+                    android:text="- Remove any visible food debris/oil using blue roll\n- Using hot soapy water and a clean disposable cloth wipe over\n- Spray the area with Antibac/Sanitiser\n- Leave to air dry with the lids open"
+                    />
+
+                <CheckBox
+                    android:id="@+id/coolBoxes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Click box when complete"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:textSize="30sp"
+                    android:text="Utensils / Fryer Trays"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="20sp"
+                    android:text="- Using hot soapy water and a clean disposable cloth wash items, use scourer if needed\n- Soak any items with heavy grease\n- Dry with a clean towel or allow to air dry where possible\n- Spray the area with Antibac/Sanitiser"
+                    />
+
+                <CheckBox
+                    android:id="@+id/utensilsFryerTrays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Click box when complete"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:textSize="30sp"
+                    android:text="Chip Scuttle"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="20sp"
+                    android:text="- Remove oil and food debris from area and place in oil container for collection\n- Using hot soapy water and a  clean disposable cloth, wipe areas of chip scuttle\n- Spray the tray with Antibac/Sanitiser"
+                    />
+
+                <CheckBox
+                    android:id="@+id/chipScuttle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Click box when complete"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:textSize="30sp"
+                    android:text="PPE/Front Cover/Tea Towels"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="20sp"
+                    android:text="- 90oc Wash in Washing Machine\n- Allow to air dry"
+                    />
+
+                <CheckBox
+                    android:id="@+id/PPE_FrontCover_TeaTowel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Click box when complete"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:textSize="30sp"
+                    android:text="Hand Wash Unit"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="20sp"
+                    android:text="- Drain remaining water and used warm water from unit\n- Using hot soapy water, wipe over unit\n- Spray the area with Antibac/Sanitiser"
+                />
+
+                <CheckBox
+                    android:id="@+id/handWashUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Click box when complete"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:textSize="30sp"
+                    android:text="Waste Bin"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="20sp"
+                    android:text="- Remove any items from bin\n- Fill with Bleach/water to manufacturerer’s instructions and discard carefully\n- Spray the area with Antibac/Sanitiser\n- Allow to Air Dry"
+                    />
+
+                <CheckBox
+                    android:id="@+id/wasteBin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Click box when complete"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:textSize="30sp"
+                    android:text="Hot Water Container"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="20sp"
+                    android:text="- Drain remaining water and used warm water from unit\n- Using hot soapy water, wipe over unit\n- Use Steriliser Table according to Manufacturer Instructions to remove build up of scale\n- Allow to Air Dry"
+                    />
+
+                <CheckBox
+                    android:id="@+id/hotWaterContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Click box when complete"
+                    />
+
+                <Button
+                    android:id="@+id/submitButton"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:text="Submit" />
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>
