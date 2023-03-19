@@ -26,94 +26,27 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/backarrow" />
+                    android:src="@drawable/backarrow"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/device"
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="100dp"
-            android:text="Search"
+            android:text="Data"
             android:textColor="@color/white"
             android:textSize="48sp" />
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="617dp"
-            android:layout_below="@+id/device"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <EditText
-                    android:id="@+id/startMonth"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="40dp"
-                    android:ems="10"
-                    android:hint="Start Month"
-                    android:inputType="number"
-                    android:minHeight="48dp"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
-                    android:backgroundTint="@color/white"/>
-
-                <EditText
-                    android:id="@+id/endMonth"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="40dp"
-                    android:ems="10"
-                    android:hint="End Month"
-                    android:inputType="number"
-                    android:minHeight="48dp"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
-                    android:backgroundTint="@color/white"/>
-
-                <EditText
-                    android:id="@+id/year"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="40dp"
-                    android:ems="10"
-                    android:hint="Year"
-                    android:inputType="number"
-                    android:minHeight="48dp"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
-                    android:backgroundTint="@color/white"/>
-
-                <Button
-                    android:id="@+id/submitButton"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="40dp"
-                    android:text="Submit"
-                    android:textColor="@color/white"
-                    />
-            </LinearLayout>
-        </ScrollView>
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="650dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="20dp">
+            android:layout_margin="20dp">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"

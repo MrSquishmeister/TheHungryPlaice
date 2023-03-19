@@ -274,7 +274,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/viewData"
+                android:id="@+id/searchData"
                 android:layout_width="170dp"
                 android:layout_height="170dp"
                 app:cardCornerRadius="12dp"
@@ -297,7 +297,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="View Data"
+                        android:text="Search Data"
                         android:textAlignment="center"
                         android:textSize="18sp"
                         android:textColor="@color/white"

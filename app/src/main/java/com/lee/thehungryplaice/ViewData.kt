@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import android.widget.EditText
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -27,60 +26,63 @@ class ViewData : AppCompatActivity() {
         setContentView(binding.root)
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        val submitButton = findViewById<Button>(R.id.submitButton)
         val backButton = findViewById<CardView>(R.id.backButton)
-        val startMonth = findViewById<EditText>(R.id.startMonth)
-        val endMonth = findViewById<EditText>(R.id.endMonth)
-        val year = findViewById<EditText>(R.id.year)
-
         backButton.setOnClickListener{
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, SearchData::class.java))
         }
 
-        submitButton.setOnClickListener {
-            var sStartMonth = startMonth.text.toString().toInt()
-            var sEndMonth = endMonth.text.toString().toInt()
-            var sYear = year.text.toString().toInt()
+        var day = 1;
+        var startMonth = 0
+        var endMonth = 0
+        var year = 0
 
-            var sDay = 1;
+        val bundle = intent.extras
+        if (bundle != null){
+            var sStartMonth = "${bundle.getString("startMonth")}"
+            var sEndMonth = "${bundle.getString("endMonth")}"
+            var sYear = "${bundle.getString("year")}"
 
-            while (sStartMonth != sEndMonth+1){
-                fun getPath(): String {
-                    return if(sDay < 10) {
-                        "0$sDay:$sStartMonth:$sYear"
-                    }else if(sStartMonth < 10){
-                        "$sDay:0$sStartMonth:$sYear"
-                    }else if(sDay < 10 && sStartMonth < 10){
-                        "0$sDay:0$sStartMonth:$sYear"
-                    }else{
-                        "$sDay:$sStartMonth:$sYear"
-                    }
+            startMonth = sStartMonth.toInt()
+            endMonth = sEndMonth.toInt()
+            year = sYear.toInt()
+        }
+
+        while (startMonth != endMonth+1){
+            fun getPath(): String {
+                return if(day < 10) {
+                    "0$day:$startMonth:$year"
+                }else if(startMonth < 10){
+                    "$day:0$startMonth:$year"
+                }else if(day < 10 && startMonth < 10){
+                    "0$day:0$startMonth:$year"
+                }else{
+                    "$day:$startMonth:$year"
                 }
-
-                while (sDay != 31){
-                    db.collection(getPath())
-                        .get()
-                        .addOnSuccessListener { documents ->
-                            for (document in documents) {
-                                Log.d(ContentValues.TAG, "${document.id} => ${document.data}")
-                                recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-                                val dataList = ArrayList<DeviceModel>()
-                                dataList.add(DeviceModel(
-                                    document.data["Date"] as String, document.data["Time"] as String,
-                                    document.data["Device"] as String, document.data["Temperature"] as String,
-                                    document.data["Comment"] as String, document.data["Checked By"] as String))
-                                val deviceAdapter = DeviceAdapter(dataList)
-                                recyclerView.adapter = deviceAdapter
-                            }
-                        }
-                        .addOnFailureListener { exception ->
-                            Log.w(ContentValues.TAG, "Error getting documents: ", exception)
-                        }
-                    sDay += 1
-                }
-                sDay = 1
-                sStartMonth += 1
             }
+
+            while (day != 31){
+                db.collection(getPath())
+                    .get()
+                    .addOnSuccessListener { documents ->
+                        for (document in documents) {
+                            Log.d(ContentValues.TAG, "${document.id} => ${document.data}")
+                            recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
+                            val dataList = ArrayList<DeviceModel>()
+                            dataList.add(DeviceModel(
+                                document.data["Date"] as String, document.data["Time"] as String,
+                                document.data["Device"] as String, document.data["Temperature"] as String,
+                                document.data["Comment"] as String, document.data["Checked By"] as String))
+                            val deviceAdapter = DeviceAdapter(dataList)
+                            recyclerView.adapter = deviceAdapter
+                        }
+                    }
+                    .addOnFailureListener { exception ->
+                        Log.w(ContentValues.TAG, "Error getting documents: ", exception)
+                    }
+                day += 1
+            }
+            day = 1
+            startMonth += 1
         }
     }
 }
